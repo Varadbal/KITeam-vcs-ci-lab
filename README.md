@@ -1,5 +1,12 @@
 # Train Speed Controller
 
+*** félkövér ***
+> blokk idézet 
+- első eszköz
+- második eszköz
+- harmadik eszköz
+
+
 This is a sample application for the verification laboratory.
 
 ## Getting started
