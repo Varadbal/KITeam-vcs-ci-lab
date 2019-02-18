@@ -20,6 +20,7 @@ public class TrainControllerImpl implements TrainController {
 		}
 
 		enforceSpeedLimit();
+		TachoGraph.insertRecord(System.currentTimeMillis(),step,referenceSpeed);
 	}
 
 	@Override 
