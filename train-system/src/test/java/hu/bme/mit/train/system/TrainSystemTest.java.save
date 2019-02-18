@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import hu.bme.mit.train.controller.*;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
@@ -53,19 +52,11 @@ public class TrainSystemTest {
 
 	@Test
 	public void newTest(){
-		user.overrideJoystickPosition(100);
-		controller.followSpeed();
+		
 		controller.emergencyBrake();
-		Assert.assertEquals(0, controller.getReferenceSpeed());
+user.overrideJoystickPosition(4);
+                controller.followSpeed();		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
-
-	@Test
-	public void tachoTest(){
-		user.overrideJoystickPosition(4);
-	        controller.followSpeed();
-                user.overrideJoystickPosition(-5);
-                controller.followSpeed();
-		Assert.assertFalse(TachoGraph.getGoogleGuavaTable().isEmpty());
-	}
-	
+}
+    
 }
