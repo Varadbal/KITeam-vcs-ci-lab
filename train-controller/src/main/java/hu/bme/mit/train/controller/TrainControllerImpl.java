@@ -23,6 +23,11 @@ public class TrainControllerImpl implements TrainController {
 		enforceSpeedLimit();
 	}
 
+	@Override 
+	public void emergencyBrake(){
+	    referenceSpeed = 0;
+	}
+
 	@Override
 	public int getReferenceSpeed() {
 		return referenceSpeed;
