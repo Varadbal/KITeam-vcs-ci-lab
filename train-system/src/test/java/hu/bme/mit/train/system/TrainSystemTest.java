@@ -57,4 +57,14 @@ public class TrainSystemTest {
 		controller.emergencyBrake();
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
+
+	@Test
+	public void tachoTest(){
+		user.overrideJoystickPosition(4);
+	        controller.followSpeed();
+                user.overrideJoystickPosition(-5);
+                controller.followSpeed();
+		Assert.assertFalse(TachoGraph.getGoogleGuavaTable().isEmpty());
+	}
+	
 }
