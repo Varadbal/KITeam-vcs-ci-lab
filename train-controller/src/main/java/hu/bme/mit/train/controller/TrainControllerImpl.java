@@ -4,7 +4,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
 	private int step = 2;
-	private int referenceSpeed = 0;
+	private int referenceSpeed = 0;sdfsdfsdf
 	private int speedLimit = 0;
 
 	@Override
