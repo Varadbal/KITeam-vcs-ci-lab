@@ -1,6 +1,6 @@
 # Train Speed Controller
 
-*** félkövér ***
+***félkövér***
 > blokk idézet 
 - első eszköz
 - második eszköz
