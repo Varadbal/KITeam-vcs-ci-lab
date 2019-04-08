@@ -7,6 +7,8 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
+	private long lastFollowSpeed = 0l;
+
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
@@ -48,7 +50,14 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
+		this.step = joystickPosition;
+
+		long now = System.currentTimeMillis();
+		if(!(lastFollowSpeed - now < 1000)){
+			followSpeed();
+			lastFollowSpeed = now;
+		}
+
 	}
 
 }
