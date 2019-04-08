@@ -53,7 +53,7 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;
 
 		long now = System.currentTimeMillis();
-		if(!(lastFollowSpeed - now < 1000)){
+		if((lastFollowSpeed - now > 1000)){
 			followSpeed();
 			lastFollowSpeed = now;
 		}
