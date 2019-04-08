@@ -67,5 +67,6 @@ public class TrainSystemTest {
                 controller.followSpeed();
 		Assert.assertFalse(TachoGraph.getGoogleGuavaTable().isEmpty());
 	}
+
 	
 }
